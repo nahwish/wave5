@@ -1,0 +1,13 @@
+{
+	"dependencies": {
+		"express": "^4.17.3",
+		"nodemon": "^2.0.15",
+		"supertest": "^6.2.2"
+	},
+	"devDependencies": {
+		"jest": "^27.5.1"
+	},
+	"scripts": {
+		"test": "jest --verbose"
+	}
+}
