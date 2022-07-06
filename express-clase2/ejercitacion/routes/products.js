@@ -9,7 +9,7 @@ http://localhost:3000/api/product/Logitech/1
 
 
 router.get("/product", (req, res) => {
-	res.json(brandsDB);
+
 });
 
 
@@ -22,7 +22,7 @@ en este caso utilizamos las dos funciones que definimos en el archivo
  */
 router.get("/user",user,auth,(req,res)=>{
 
-	res.send(res.locals.message)
+
 })
 
 
