@@ -32,7 +32,7 @@ afterEach(() => {
 	productsDB = productBackup;
 });
 
-describe("DELETE", () => {
+xdescribe("DELETE", () => {
 	it("Debería ser un metodo DELETE a '/product/:id'", async () => {
 		expect(deleteResponse.req.method).toBe("DELETE");
 		expect(deleteResponse.res.statusCode).toBe(200);
@@ -57,7 +57,7 @@ describe("DELETE", () => {
 	});
 });
 
-describe("GET", () => {
+xdescribe("GET", () => {
 	it("La ruta /product debería mostar el array de objetos", () => {
 		expect(getResponseProduct.body.length).toBe(2);
 		expect(typeof getResponseProduct.body).toBe("object");
@@ -76,7 +76,7 @@ describe("GET", () => {
 	});
 });
 
-describe("POST", () => {
+xdescribe("POST", () => {
 	it("/product debería poder agregar un producto", async () => {
 		const RouteProducts = await api.get("/api/product");
 		const contents = RouteProducts.body.map((pdct) => pdct.name);
@@ -90,7 +90,7 @@ describe("POST", () => {
 	});
 });
 
-describe("PUT", () => {
+xdescribe("PUT", () => {
 	it("/product/:id debería poder actualizar el nombre de un producto", () => {
 		let brandName = putResponse.body.brandsDB.filter(
 			(brnd) => brnd.name === replaceBrand.name

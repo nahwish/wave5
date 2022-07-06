@@ -13,6 +13,7 @@ Probar que el mensaje llega al navegador.
 - Correr el comando `npm test`, verás los test fallando
 - Deberás hacer que los test pasen (tilde verde), teniendo en cuenta el ejercicio
 - A medida que vas pasando los ejercicios deberás ir quitandole las 'x' a los bloques `describe` que se encuentran en el archivo `express-clase1/homework/app.spec.js`.
+- NOTA: para poder levantar la app en caso de querer hacer pruebas con postman, deberían correr ```npm run dev```
 ## EXTRA
 - Para realizar la actividad extra, deberás eliminar la 'x' del bloque 'describe' de './app.spec.js'
 
