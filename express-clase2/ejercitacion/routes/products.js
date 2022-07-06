@@ -71,11 +71,13 @@ router.put("/product/:id", (req, res) => {
 http://localhost:3000/api/product/1
  */
 
+
 /**
  * Este método debe poder eliminar un producto
  */
 router.delete("/product/:id", (req, res) => {
 	
+
 });
 
 
