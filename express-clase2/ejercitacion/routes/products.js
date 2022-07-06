@@ -103,10 +103,10 @@ router.delete("/product/:id", (req, res) => {
 	let id = parseInt(req.params.id);
 
 	let productFound = brandsDB.find((product) => product.id === id);
-	let productFilter = brandsDB.filter((product) => product.id !== id);
+	//let productFilter = brandsDB.filter((product) => product.id !== id);
 
-	brandsDB = productFilter;
-
+	brandsDB = brandsDB.filter((product) => product.id !== id);
+console.log('brandDB',brandsDB)
 	res.status(200).json({
 		message: "Producto Eliminado",
 		product: productFound,
