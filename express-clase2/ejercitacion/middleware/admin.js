@@ -6,7 +6,9 @@ las utilizamos en "/routes/products.js"
 
 que es res.locals? : https://www.geeksforgeeks.org/express-js-res-locals-property/
 */
-
+/**
+ * Esta funcion deberia guardar en locals.user un objeto
+ */
 function user(req, res, next) {
 	
 	res.locals.user = {
