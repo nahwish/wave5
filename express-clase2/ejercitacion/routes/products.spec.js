@@ -36,6 +36,4 @@ describe("DELETE", () => {
 		});
 	});
 });
-describe("GET", () => {
-	describe("");
-});
+
