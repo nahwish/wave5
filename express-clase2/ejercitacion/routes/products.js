@@ -21,7 +21,8 @@ en este caso utilizamos las dos funciones que definimos en el archivo
 
  */
 router.get("/user",user,auth,(req,res)=>{
-	console.log(res.locals)
+
+	res.send(res.locals.message)
 })
 
 

@@ -7,31 +7,19 @@ las utilizamos en "/routes/products.js"
 que es res.locals? : https://www.geeksforgeeks.org/express-js-res-locals-property/
 */
 /**
- * Esta funcion deberia guardar en locals.user un objeto
+ * Esta funcion deberia guardar en res.locals.user un objeto con atributos id,name,admin recibidos por body 
  */
+
 function user(req, res, next) {
+
+		next()
 	
-	res.locals.user = {
-		id: 1,
-		name: "Irunga",
-		admin: true,
-	};
-	next();
 };
 
 
  function auth(req, res,next) {
-	let { admin, name } = res.locals.user;
-
-	if (admin) {
 	
-    res.send(`El usuario ${name}, es admin`);
-		next()
-	} else {
-		console.log(`El usuario ${name}, no es admin`);
-  
-		res.send(`Error Auth`);
-	}
+	next()
 };
 
 module.exports = {user,auth}
