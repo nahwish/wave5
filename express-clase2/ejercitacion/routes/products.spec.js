@@ -1,6 +1,7 @@
 const supertest = require("supertest");
 const { app } = require("../app");
 const api = supertest(app);
+
 let productsDB = require("../utils/products");
 
 let deleteResponse;
@@ -30,20 +31,24 @@ beforeAll(async () => {
 });
 afterEach(() => {
 	productsDB = productBackup;
+
 });
 
 xdescribe("DELETE", () => {
 	it("Debería ser un metodo DELETE a '/product/:id'", async () => {
+
 		expect(deleteResponse.req.method).toBe("DELETE");
 		expect(deleteResponse.res.statusCode).toBe(200);
 	});
 
 	it("Al eliminar un producto debería devolver un objeto con las propiedades message y product", async () => {
+
 		expect(deleteResponse.body.message).toBeDefined();
 		expect(deleteResponse.body.product).toBeDefined();
 	});
 
 	it("La propiedad message debe contener el string 'Producto Eliminado'", async () => {
+
 		expect(deleteResponse.body.message).toMatch(/producto eliminado/i);
 	});
 
@@ -103,4 +108,5 @@ xdescribe("PUT", () => {
 		expect(putResponse.body.message).toMatch(/producto actualizado/i);
 		expect(putResponse.res.statusCode).toBe(200);
 	});
+
 });

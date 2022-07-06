@@ -42,7 +42,7 @@ let productsDB = [
       },
       {
         name: 'apple watch',
-        id: 3,
+        id: 4,
         description:
           'El Apple Watch es el primer smartwatch creado por la empresa tecnológica Apple, presentado el 9 de septiembre de 2014 en su Keynote por Tim Cook.',
       },
