@@ -37,12 +37,10 @@ beforeAll(async () => {
 });
 afterEach(() => {
 	productsDB = productBackup;
-
 });
 
 xdescribe("DELETE", () => {
 	it("Debería ser un metodo DELETE a '/product/:id'", async () => {
-
 		expect(deleteResponse.req.method).toBe("DELETE");
 		expect(deleteResponse.res.statusCode).toBe(200);
 	});
@@ -54,7 +52,6 @@ xdescribe("DELETE", () => {
 	});
 
 	it("La propiedad message debe contener el string 'Producto Eliminado'", async () => {
-
 		expect(deleteResponse.body.message).toMatch(/producto eliminado/i);
 	});
 

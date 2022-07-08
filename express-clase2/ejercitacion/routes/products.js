@@ -11,7 +11,7 @@ http://localhost:3000/api/product/Logitech/1
 
 
 router.get("/product", (req, res) => {
-	
+
 });
 
 
@@ -32,6 +32,7 @@ router.get("/user",user,auth,(req,res)=>{
 router.get("/product", (req, res) => {
 	res.json(brandsDB);
 });
+
 
 
 // Si se encuenta el producto,devuelve un objeto con:
