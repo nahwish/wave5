@@ -1,4 +1,5 @@
 const supertest = require("supertest");
+
 const htttpMocks = require('node-mocks-http');
 const { app } = require("../app");
 const {user,auth} = require('./admin');
@@ -10,6 +11,7 @@ describe("Middlewares",()=>{
   
   it("user debe guardar en res.locals.user un objeto",()=>{
     const request = htttpMocks.createRequest({
+
 			method: "GET",
 			url: "/api/user",
 			body: {
@@ -18,6 +20,7 @@ describe("Middlewares",()=>{
 				admin: true,
 			},
 		});
+
     return user(request,res,()=>{
       console.log(res.locals)
       expect(res.locals.user).toBeDefined()
@@ -33,10 +36,12 @@ describe("Middlewares",()=>{
   });
   
   it("auth Debe devolver un mensaje 'El usuario ${name}, es admin' si es admin", async () => {
+
 		const userObject = { id: 2, name: "pepe", admin: true };
 		const response = await api.get("/api/user").send(userObject);
 		expect(response.text).toBe(`El usuario ${userObject.name}, es admin`);
 	});
+
    it("auth Debe devolver un mensaje 'Error Auth' si no es admin", async () => {
 			const response = await api
 				.get("/api/user")
@@ -45,3 +50,4 @@ describe("Middlewares",()=>{
 			expect(response.text).toMatch(/Error Auth/i);
 		});
 })
+

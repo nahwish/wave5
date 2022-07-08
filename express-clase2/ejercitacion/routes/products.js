@@ -1,14 +1,17 @@
 const express = require("express");
 const router = express.Router();
 let brandsDB = require("../utils/products");
-const {user,auth} = require("../middleware/admin")
+const {user,auth} = require("../middleware/admin");
+
 /************************************************************* 
 	GET
 http://localhost:3000/api/product/Logitech/1
  ************************************************************/
 
 
+
 router.get("/product", (req, res) => {
+
 });
 
 
@@ -19,9 +22,16 @@ en este caso utilizamos las dos funciones que definimos en el archivo
 "../middleware/admin"
 
  */
+// esto no tiene test
 router.get("/user",user,auth,(req,res)=>{
 
 })
+
+
+router.get("/product", (req, res) => {
+	res.json(brandsDB);
+});
+
 
 
 
@@ -46,6 +56,7 @@ http://localhost:3000/api/product
  * 	y brand : <nombre de la marca agregada>
  * 	Ej: {message : "Marca agregada",brand: "Iphone"}
  * */
+
 router.post("/product", (req, res) => {
 
 });
