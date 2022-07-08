@@ -11,7 +11,7 @@ http://localhost:3000/api/product/Logitech/1
 
 
 router.get("/product", (req, res) => {
-	
+
 });
 
 
