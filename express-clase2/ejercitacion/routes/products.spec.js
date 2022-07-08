@@ -2,6 +2,7 @@ const supertest = require("supertest");
 const { app } = require("../app");
 const api = supertest(app);
 
+
 let productsDB = require("../utils/products");
 
 let deleteResponse;
@@ -25,11 +26,14 @@ let newProduct = {
 beforeAll(async () => {
 	getResponseBrandResult = await api.get(`/api/product/${brand}/1`);
 	getResponseBrand = await api.get(`/api/product/:brand/${brandId}`);
+
 	getResponseProduct = await api.get("/api/product");
+
 	responseGetProducts = await api.get("/api/product");
 	deleteResponse = await api.delete(`/api/product/${productId}`);
 	postResponse = await api.post("/api/product").send(newProduct).expect(200);
 	putResponse = await api.put("/api/product/1").send(replaceBrand);
+
 });
 afterEach(() => {
 	productsDB = productBackup;

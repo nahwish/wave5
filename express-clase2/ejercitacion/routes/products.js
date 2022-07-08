@@ -26,6 +26,7 @@ en este caso utilizamos las dos funciones que definimos en el archivo
 router.get("/user",user,auth,(req,res)=>{
 
 })
+=======
 
 
 router.get("/product", (req, res) => {
@@ -34,13 +35,12 @@ router.get("/product", (req, res) => {
 
 
 
-
 // Si se encuenta el producto,devuelve un objeto con:
 //brand , el nombre de la marca
 //description, la descripcion de la marca
 //product, el producto entero que corresponde a esa marca
 router.get("/product/:brand/:productId?", (req, res) => {
-	
+
 });
 
 /**
