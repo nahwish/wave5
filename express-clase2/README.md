@@ -1,4 +1,4 @@
-## Express clase 3
+## Express clase 2
 
 Vamos a crear un CRUD con los siguientes endpoints que, mediante Postman, nos permita:
 
@@ -10,8 +10,8 @@ Vamos a crear un CRUD con los siguientes endpoints que, mediante Postman, nos pe
 
 # INDICACIONES
 
-- Correr el comando `npm install` dentro de la carpeta `express-clase3/ejercitacion`
-- Prestá atención a las consignas,deberás trabajar en el archivo `express-clase3/ejercitacion/routes/products.js`
+- Correr el comando `npm install` dentro de la carpeta `express-clase2/ejercitacion`
+- Prestá atención a las consignas,deberás trabajar en el archivo `express-clase2/ejercitacion/routes/products.js`
 - Correr el comando `npm test`, verás los test fallando
 - Deberás hacer que los test pasen (tilde verde), teniendo en cuenta el ejercicio
 - A medida que vas pasando los ejercicios deberás ir quitandole las 'x' a los bloques `describe` que se encuentran en el archivo `express-clase1/ejercitacion/app.spec.js`.
